@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lugares - WayGO</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      background: url('img/ata.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background: linear-gradient(to right, #0077b6, #f77f00);
+      padding: 2rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav {
+      background-color: #002f6c;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00b4d8;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: rgba(0, 119, 182, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      width: 250px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      text-decoration: none;
+      color: white;
+      backdrop-filter: blur(6px);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      filter: brightness(95%);
+    }
+
+    .card h3 {
+      margin: 0;
+      padding: 1rem;
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    a.volver {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: #008080;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    a.volver:hover {
+      background: #004c4c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lugares Turísticos</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a> 
+  </nav>
+
+  <section>
+    <h2>Explora los mejores lugares</h2>
+    <p>Haz clic en un lugar para ver más detalles.</p>
+
+    <div class="grid" id="lugaresGrid">
+      <a href="el tunco.html" class="card">
+        <img src="img/eltunco.jpg" alt="Playa El Tunco">
+        <h3>Playa El Tunco</h3>
+      </a>
+      <a href="coatepeque.html" class="card">
+        <img src="img/lagocoatepeque.jpg" alt="Lago de Coatepeque">
+        <h3>Lago de Coatepeque</h3>
+      </a>
+      <a href="cerro verde.html" class="card">
+        <img src="img/cerroverde.jpg" alt="Cerro Verde">
+        <h3>Cerro Verde</h3>
+      </a>
+      <a href="el pital.html" class="card">
+        <img src="img/pital.jog.JPG" alt="El Pital">
+        <h3>El Pital</h3>
+      </a>
+      <a href="puerta diablo.html" class="card">
+        <img src="img/puerta.jpg" alt="Puerta del Diablo">
+        <h3>Puerta del Diablo</h3>
+      </a>
+      <a href="suchitoto.html" class="card">
+        <img src="img/suchitoto.jpg" alt="Suchitoto">
+        <h3>Suchitoto</h3>
+      </a>
+      <a href="joya cerén.html" class="card">
+        <img src="img/joya2.jpg" alt="Joya de Cerén">
+        <h3>Joya de Cerén</h3>
+      </a>
+      <a href="bahia jiquilisco.html" class="card">
+        <img src="img/bahia.jpg" alt="Bahía de Jiquilisco">
+        <h3>Bahía de Jiquilisco</h3>
+      </a>
+      <a href="parque cuscatlán.html" class="card">
+        <img src="img/Parque_Cuscatlán.jpg" alt="Parque Cuscatlán">
+        <h3>Parque Cuscatlán</h3>
+      </a>
+      <a href="volcan izalco.html" class="card">
+        <img src="img/izalco-01.jpg" alt="Volcán de Izalco">
+        <h3>Volcán de Izalco</h3>
+      </a>
+      <a href="playa el cuco.html" class="card">
+        <img src="img/cuco-03.jpg" alt="Playa El Cuco">
+        <h3>Playa El Cuco</h3>
+      </a>
+      <a href="montecristo.html" class="card">
+        <img src="img/montecristo.jpg" alt="Parque Nacional Montecristo">
+        <h3>Parque Nacional Montecristo</h3>
+      </a>
+    </div>
+
+    <a href="index.html" class="volver">⬅ Volver al inicio</a>
+  </section>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Pampa - App Turística</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      position: relative;
+      background: url('img2/pampa.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.7));
+      z-index: 1;
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      padding: 15px 30px;
+      border-radius: 12px;
+      z-index: 2;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      animation: fadeIn 1.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #b03a2e;
+      margin-top: 2rem;
+    }
+
+    p, li {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, filter 0.3s ease;
+      cursor: pointer;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+      filter: brightness(0.95);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .menu-item {
+      background: white;
+      border-radius: 10px;
+      padding: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    }
+
+    .menu-item h4 {
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .menu-item p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .precio {
+      float: right;
+      font-weight: 700;
+      color: #b03a2e;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+      flex: 1;
+      min-width: 260px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .reseñas {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .reseña {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    .estrellas {
+      color: #f1c40f;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .contacto {
+      margin-top: 1rem;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #b03a2e;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #7f261d;
+    }
+
+    a.volver {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #008080;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    a.volver:hover {
+      background: #004c4c;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; padding: 10px 18px; }
+      .galeria img { width: 100%; height: 180px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>La Pampa El Salvador</h1>
+  </header>
+
+  <section>
+    <h2>Descripción</h2>
+    <p>
+      <strong>La Pampa Argentina</strong> en El Salvador es una de las cadenas de restaurantes más reconocidas del país, famosa por su especialidad en carnes a la parrilla, cortes premium y un ambiente elegante.  
+      Con varias sucursales, ofrece una experiencia gastronómica de alta calidad, ideal para cenas familiares, reuniones de negocios o celebraciones especiales.
+    </p>
+
+    <div class="info-row">
+      <div class="card">
+        <h2>Menú destacado</h2>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <h4>Bife de Chorizo <span class="precio">$18.50</span></h4>
+            <p>Corte argentino jugoso, acompañado de guarniciones a elección.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Parrillada Mixta <span class="precio">$25.00</span></h4>
+            <p>Selección de cortes de res, pollo y chorizo, ideal para compartir.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Ensalada Mediterránea <span class="precio">$8.75</span></h4>
+            <p>Mix de vegetales frescos con aceitunas, queso feta y aderezo especial.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Sopa de Cebolla <span class="precio">$6.00</span></h4>
+            <p>Tradicional sopa gratinada con queso fundido.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Rib Eye <span class="precio">$22.00</span></h4>
+            <p>Corte premium a la parrilla con un punto de cocción perfecto.</p>
+          </div>
+          <div class="menu-item">
+            <h4>Volcán de Chocolate <span class="precio">$5.50</span></h4>
+            <p>Postre caliente de chocolate con helado de vainilla.</p>
+          </div>
+        </div>
+
+        <p style="margin-top:12px;">
+          <strong>Horarios:</strong> Lun - Dom: 12:00 - 23:00<br>
+          <strong>Teléfono:</strong> +503 2243-7777
+        </p>
+
+        <div class="contacto">
+          <a class="btn" href="tel:+50322437777">Llamar</a>
+          <a class="btn" href="https://wa.me/50322437777" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Ubicación</h2>
+        <p>Colonia San Benito, Av. La Capilla #123, San Salvador, El Salvador.</p>
+
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.12123456789!2d-89.240000000!3d13.700000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f632cdef1234567%3A0xabcdef123456789!2sLa%20Pampa%20San%20Benito!5e0!3m2!1ses!2ssv!4v1696000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <p style="margin-top:10px;">
+          <strong>Cómo llegar:</strong> A pocos metros del Museo de Arte de El Salvador (MARTE), con estacionamiento privado para clientes.
+        </p>
+      </div>
+    </div>
+
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img2/cortecaren.jpg" alt="Corte de carne La Pampa">
+      <img src="img2/interiorpampa.jpg" alt="Interior restaurante La Pampa">
+      <img src="img2/parriila.jpg" alt="Parrillada mixta La Pampa">
+    </div>
+
+    <h2>Reseñas</h2>
+    <div class="reseñas">
+      <div class="reseña">
+        <div><span class="estrellas">★★★★★</span><strong>Andrés L.</strong> — 20/09/2025</div>
+        <p>Excelente carne, ambiente sofisticado y atención impecable.</p>
+      </div>
+
+      <div class="reseña">
+        <div><span class="estrellas">★★★★☆</span><strong>Gabriela M.</strong> — 10/09/2025</div>
+        <p>Los cortes son deliciosos, aunque los precios un poco elevados. Vale la pena la experiencia.</p>
+      </div>
+
+      <div class="reseña">
+        <div><span class="estrellas">★★★★★</span><strong>José R.</strong> — 05/08/2025</div>
+        <p>Perfecto para ocasiones especiales. El rib eye estuvo increíble.</p>
+      </div>
+    </div>
+
+    <a href="restaurantes.html" class="volver">⬅ Volver a Restaurantes</a>
+  </section>
+</body>
+</html>

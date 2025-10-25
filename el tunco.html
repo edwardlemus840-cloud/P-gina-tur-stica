@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playa El Tunco - App Turística</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      position: relative;
+      background: url('img/ELTUNCO.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      height: 70vh; /* más alto para lucir la imagen */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Degradado encima de la imagen */
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+      z-index: 1;
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      padding: 15px 30px;
+      border-radius: 12px;
+      z-index: 2;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #008080;
+      margin-top: 2rem;
+    }
+
+    p, li {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    a.volver {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #008080;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    a.volver:hover {
+      background: #004c4c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Playa El Tunco</h1>
+  </header>
+
+  <section>
+    <h2>Historia</h2>
+    <p>
+      Playa El Tunco es uno de los destinos más famosos de surf en El Salvador y en toda Centroamérica. 
+      Su nombre proviene de una gran roca con forma de cerdo ("tunco" en salvadoreño) ubicada en la orilla del mar. 
+      Durante los últimos años, se ha convertido en un punto de encuentro para surfistas, mochileros y turistas 
+      internacionales gracias a sus olas y ambiente bohemio.
+    </p>
+
+    <h2>Ubicación</h2>
+    <p>
+      La playa está situada en el departamento de La Libertad, a unos 37 km al suroeste de San Salvador. 
+      Se encuentra en el corazón de la zona surfera del país, con fácil acceso desde la carretera litoral.
+    </p>
+    <!-- Mapa de Google -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.673530617254!2d-89.37701252506507!3d13.493704804258138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63289fa0fef0e9%3A0x1f3ea364ab539ccf!2sPlaya%20El%20Tunco!5e0!3m2!1ses!2ssv!4v1695990900000"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <h2>¿Por qué es famosa?</h2>
+    <ul>
+      <li><strong>Surf de clase mundial:</strong> Es conocida como la "capital del surf en El Salvador", con olas consistentes y rompientes como La Bocana (pico A-frame) y El Sunzal (derecha perfecta para todos los niveles). <em>(Tripadvisor)</em></li>
+      <li><strong>Arena volcánica:</strong> Su arena negra es producto de la actividad volcánica, creando un paisaje único y atractivo. <em>(CATA)</em></li>
+      <li><strong>Ambiente bohemio y cosmopolita:</strong> Combina un estilo relajado con una oferta vibrante de bares, restaurantes, hostales y tiendas de surf, atrayendo a una comunidad diversa de visitantes. <em>(El Salvador Travel)</em></li>
+    </ul>
+
+    <h2>Qué hacer en El Tunco </h2>
+    <ul>
+      <li><strong>Surf:</strong> Disfrutar de las olas en La Bocana y El Sunzal.</li>
+      <li><strong>Atardeceres:</strong> Observar puestas de sol espectaculares sobre el océano Pacífico.</li>
+      <li><strong>Gastronomía:</strong> Probar mariscos frescos y platos locales en los restaurantes frente al mar.</li>
+      <li><strong>Vida nocturna:</strong> Disfrutar de bares con música en vivo y ambiente relajado.</li>
+    </ul>
+
+    <h2>Cómo llegar </h2>
+    <p><strong>En vehículo privado:</strong></p>
+    <ul>
+      <li>Toma la Carretera Panamericana (CA-1) hacia el sur.</li>
+      <li>Continúa hasta llegar a La Libertad.</li>
+      <li>Desde La Libertad, sigue las señales hacia Tamanique y luego hacia El Tunco.</li>
+    </ul>
+    <p><strong>En transporte:</strong></p>
+    <ul>
+      <li>Desde la Terminal de Occidente en San Salvador, toma un autobús hacia La Libertad.</li>
+      <li>Desde La Libertad, puedes tomar un autobús local hacia Tamanique y luego un transporte hacia El Tunco.</li>
+    </ul>
+
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img/rocatunco.jpg" alt="Vista de la roca El Tunco">
+      <img src="img/surf.jpg" alt="Surf en El Tunco">
+      <img src="img/ata.jpg" alt="Atardecer en El Tunco">
+    </div>
+
+    <a href="lugares.html" class="volver">⬅ Volver a Lugares</a>
+  </section>
+</body>
+</html>
+
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puerta del Diablo - App Turística</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      position: relative;
+      background: url('img/vista puerta.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+      z-index: 1;
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      padding: 15px 30px;
+      border-radius: 12px;
+      z-index: 2;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #008080;
+      margin-top: 2rem;
+    }
+
+    p, li {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    .galeria img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    a.volver {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #008080;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    a.volver:hover {
+      background: #004c4c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Puerta del Diablo</h1>
+  </header>
+
+  <section>
+    <h2>Historia</h2>
+    <p>
+      La Puerta del Diablo es un famoso promontorio rocoso ubicado en el departamento de San Salvador. 
+      Su nombre proviene de una leyenda local que dice que antiguamente el diablo aparecía en la roca para tentar a los pobladores. 
+      Hoy en día es un sitio turístico reconocido por sus impresionantes vistas panorámicas del Valle de San Salvador.
+    </p>
+
+    <h2>Ubicación</h2>
+    <p>
+      Se encuentra a solo 14 km al oeste de San Salvador, en las cercanías de la Carretera a Los Planes de Renderos. 
+      Es fácilmente accesible desde la capital y ofrece rutas de senderismo hacia la cima de la roca.
+    </p>
+
+    <!-- Mapa de Google -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.123456789!2d-89.227123456!3d13.678123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f632cdef1234567%3A0xabcdef123456789!2sPuerta%20del%20Diablo!5e0!3m2!1ses!2ssv!4v1696000000000"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <h2>¿Por qué es famosa?</h2>
+    <ul>
+      <li><strong>Vistas panorámicas:</strong> Ofrece una impresionante vista del Valle de San Salvador y sus alrededores. <em>(El Salvador Travel)</em></li>
+      <li><strong>Roca icónica:</strong> Su formación rocosa ha sido inspiración para leyendas y es ideal para fotografía.</li>
+      <li><strong>Senderismo:</strong> Sus rutas cortas permiten caminar y explorar la zona natural.</li>
+    </ul>
+
+    <h2>Qué hacer en la Puerta del Diablo</h2>
+    <ul>
+      <li><strong>Senderismo:</strong> Ascender hasta la cima y disfrutar del paisaje.</li>
+      <li><strong>Fotografía:</strong> Capturar panorámicas del valle y el atardecer.</li>
+      <li><strong>Picnic:</strong> Disfrutar de la naturaleza y descansar en áreas seguras.</li>
+      <li><strong>Observación de flora y fauna:</strong> Explorar la vegetación y aves locales.</li>
+    </ul>
+
+    <h2>Cómo llegar</h2>
+    <p><strong>En vehículo privado:</strong></p>
+    <ul>
+      <li>Desde San Salvador, toma la Carretera a Los Planes de Renderos.</li>
+      <li>Continúa siguiendo las señales hacia la Puerta del Diablo.</li>
+    </ul>
+    <p><strong>En transporte público:</strong></p>
+    <ul>
+      <li>Desde San Salvador, toma un bus hacia Los Planes de Renderos y luego un transporte local hasta la Puerta del Diablo.</li>
+    </ul>
+
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img/vista puerta.jpg" alt="vista puerta del diablo">
+      <img src="img/rocaspuerta.jpg" alt="formacion rocosa de la puerta del diablo">
+      <img src="img/atarpuerta.jpg" alt="Atardecer en la Puerta del Diablo">
+    </div>
+
+    <a href="lugares.html" class="volver">⬅ Volver a Lugares</a>
+  </section>
+</body>
+</html>
